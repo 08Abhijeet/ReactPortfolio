@@ -33,6 +33,19 @@ const Item1 = styled.div`
   color: #1eff00;
 `;
 
+const HrLine = styled.hr`
+  width: 90rem;
+  border: none;
+ margin: 0 auto;
+  height: 2.5px;
+  margin-top: 80px;
+  background-color: grey;
+  @media (max-width: 768px)
+  {
+    width: 15rem;
+    margin-top: 40px;
+  }
+`;
 const Item2 = styled.div`
   height: 30rem;
   width: 85rem;
@@ -70,6 +83,7 @@ const Item2 = styled.div`
     font-size: 38px;
   }
 `;
+
 
 const Content = styled.div`
   display: flex;
@@ -192,7 +206,7 @@ const Project = () => {
           </Hello>
         </Item2>
       </Content>
-     
+     <HrLine></HrLine>
     </>
   );
 };
