@@ -30,7 +30,7 @@ const Item1 = styled.div`
   font-size: 3rem;
   text-align: center;
   width: fit-content;
-
+  
   height: fit-content;
   margin: 0 auto;
   @media (max-width: 768px) {
@@ -118,10 +118,11 @@ const Last = styled.p`
 const Skills = () => {
   return (
     <>
-    <Skilles>
+    
+    <Skilles id="skills">
       <Items>
-        <Item1>
-          <p>
+        <Item1 >
+          <p >
             Skills <br></br>
             <Last>
               Versatile skill set encompassing proficiency in JavaScript,
@@ -188,6 +189,8 @@ const Skills = () => {
       </Items>
     </Skilles>
     <HrLine/>
+    
+    
     </>
     
   );

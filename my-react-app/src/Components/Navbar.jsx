@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { GiReactor } from "react-icons/gi";
 import { keyframes } from "styled-components";
 import { useState } from "react";
-
+import { Link } from "react-scroll";
 const Navcontainer = styled.div`
   position: fixed;
  top: 0%;
@@ -174,6 +174,8 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setShowMobileMenu((prev) => !prev);
   };
+  
+
 
   return (
     <Navcontainer>
@@ -186,21 +188,55 @@ const Navbar = () => {
         </Items>
         <MobileMenuIcon onClick={toggleMobileMenu}>☰</MobileMenuIcon>
         <Navitems>
-          <NavLink>Home</NavLink>
-          <NavLink>Projects</NavLink>
-          <NavLink>Education</NavLink>
-          <NavLink>Skills</NavLink>
+          <NavLink>
+            <Link to="home" smooth={true} duration={500}>
+              Home
+            </Link>
+          </NavLink>
+          <NavLink>
+            <Link to="my-projects" smooth={true} duration={500}>
+              Projects
+            </Link>
+          </NavLink>
+          <NavLink>
+            <Link to="education" smooth={true} duration={500}>
+              Education
+            </Link>
+          </NavLink>
+          <NavLink>
+            <Link to="skills" smooth={true} duration={500}>
+              Skills
+            </Link>
+          </NavLink>
         </Navitems>
         <ButtonContainer>
-          <GithubButton href="https://github.com/08Abhijeet/Portfolio">Github Profile</GithubButton>
+          <GithubButton href="https://github.com/08Abhijeet/Portfolio">
+            Github Profile
+          </GithubButton>
         </ButtonContainer>
         {showMobileMenu && (
           <MobileMenu showMenu={showMobileMenu}>
-            <NavLink>Home</NavLink>
-            <NavLink>Skills</NavLink>
-            <NavLink>Projects</NavLink>
-            <NavLink>Education</NavLink>
-            <GithubButton >Github Profile</GithubButton>
+            <NavLink>
+              <Link to="home" smooth={true} duration={500}>
+                Home
+              </Link>
+            </NavLink>
+            <NavLink>
+              <Link to="skills" smooth={true} duration={500}>
+                Skills
+              </Link>
+            </NavLink>
+            <NavLink>
+              <Link to="my-projects" smooth={true} duration={500}>
+                Projects
+              </Link>
+            </NavLink>
+            <NavLink>
+              <Link to="education" smooth={true} duration={500}>
+                Education
+              </Link>
+            </NavLink>
+            <GithubButton>Github Profile</GithubButton>
           </MobileMenu>
         )}
       </Nav>

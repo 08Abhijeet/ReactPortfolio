@@ -32,17 +32,15 @@ html{
   background: #626970;
 }
 
-
-
 body
 
 {
   background-image: url("noob.jpg");
 
-
+overflow: auto;
   background-size: cover;
   height: 100%;
-
+ scroll-behavior: auto;
   width: 100%;
   margin: 0px !important;
   padding: 0;

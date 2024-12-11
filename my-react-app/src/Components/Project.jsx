@@ -12,10 +12,10 @@ const Inner = styled.div`
   display: flex;
   height: fit-content;
   width: fit-content;
-  border-radius: 1rem;
+
   margin: 0 auto;
-  background-color: #000000;
-  border: 2px solid white;
+ font-weight: 700;
+
   align-items: center;
   justify-content: center;
 `;
@@ -24,13 +24,13 @@ const Inner = styled.div`
 const Item1 = styled.div`
   display: flex;
   height: fit-content;
-
+  padding-top: 4rem;
   width: fit-content;
   font-size: 2.5rem;
   align-items: center;
   justify-content: center;
   margin: 0%;
-  color: #1eff00;
+  color: #ffffff;
 `;
 
 const HrLine = styled.hr`
@@ -56,6 +56,7 @@ const Item2 = styled.div`
   gap: 4px;
 
   display: flex;
+
   img {
     height: 24rem; /* Adjust size as needed */
     width: 25rem;
@@ -64,25 +65,40 @@ const Item2 = styled.div`
     margin: auto;
     margin-left: 10px;
     margin-right: 2.5rem; /* Add spacing between the image and text */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+
+    &:hover {
+      transform: scale(1.05); /* Increase the size to 110% */
+    }
   }
+
+  h1 {
+    margin-top: 35px;
+    font-size: 38px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth scaling and color change */
+
+    &:hover {
+      transform: scale(1.02); /* Increase size to 110% */
+      color: #ffd900; /* Change color on hover (optional) */
+    }
+  }
+
   p {
     font-size: 1.35rem;
     font-weight: 500;
     margin-top: 10px;
     text-align: justify;
-   margin-right: 20px;
+    margin-right: 20px;
   }
+
   a {
     color: #ffd900;
     font-size: 1.5rem;
     margin-top: 10px;
   }
-  h1{
-
-    margin-top: 35px;
-    font-size: 38px;
-  }
 `;
+
+
 
 
 const Content = styled.div`
@@ -102,11 +118,13 @@ const Hello = styled.div`
 `;
 
 const Project = () => {
+
   return (
     <>
-      <Outer>
+    
+    <Outer>
         <Inner>
-          <Item1>
+          <Item1 id="my-projects">
             <p>My Projects</p>
           </Item1>
         </Inner>
@@ -207,6 +225,8 @@ const Project = () => {
         </Item2>
       </Content>
      <HrLine></HrLine>
+
+     
     </>
   );
 };

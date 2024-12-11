@@ -12,6 +12,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   color: white;
+ 
   position: relative;
   z-index: 1;
   align-items: center;
@@ -28,6 +29,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   color: white;
+
   max-width: 1350px;
   padding: 0px 0px 80px 0px;
   gap: 12px;
@@ -41,6 +43,7 @@ const Title = styled.div`
   text-align: center;
   color: white;
   font-weight: 600;
+  
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
@@ -64,7 +67,9 @@ const Desc = styled.div`
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
+  border: 2px solid white;
   display: flex;
+  border-radius: 20px;
   flex-direction: column;
   background-color: ${({ theme }) => theme.card};
   padding: 32px;
